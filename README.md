@@ -1,27 +1,25 @@
-# Essentials
+# Easytask
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.2.
+## About
 
-## Development server
+A minimalist task management project built to learn & practice the essential concepts of Angular, that uses modules instead of standalone components.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- View a user tasks
+- Create tasks
+- Mark tasks as completed
+- Responsive design for mobile and desktop
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Architecture
 
-## Build
+<img src="/src/images/easytask-module-architecture.png" alt="Easytask Components Structure"/>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+The application follows Angular best practices with a modular component structure for maintainability and scalability.
 
-## Running unit tests
+## Angular modules review
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- <u>**Declarations**</u> array, contains standalone components thar are going to be used ONLY in the current component template.
+- <u>**Bootstrap**</u> array contains the root component that will be used by Angular to start the application.
+- In <u>**Imports**</u> array we can register modules AND standalone components that contains functionalities needed for the current component.
+- <u>**Exports**</u> array contains ONLY the components that will be used in other components. For example, in AppComponent I use only the TasksComponent, so, in TasksModule I export only that component.
