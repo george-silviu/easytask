@@ -6,9 +6,9 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { TasksComponent } from './tasks/tasks.component';
 import { UserComponent } from './user/user.component';
-import { CardComponent } from './shared/card/card.component';
 import { NewTaskComponent } from './tasks/new-task/new-task.component';
 import { TaskComponent } from './tasks/task/task.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -17,11 +17,10 @@ import { TaskComponent } from './tasks/task/task.component';
     HeaderComponent,
     TasksComponent,
     UserComponent,
-    CardComponent,
     TaskComponent,
     NewTaskComponent,
   ],
   bootstrap: [AppComponent], // here is specified the root component that Angular will use to start the application,
-  imports: [BrowserModule, FormsModule], // here we can register standalone components AND modules
+  imports: [BrowserModule, FormsModule, SharedModule], // here we can register standalone components AND modules
 })
 export class AppModule {}
