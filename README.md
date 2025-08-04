@@ -13,7 +13,7 @@ A minimalist task management project built to learn & practice the essential con
 
 ## Architecture
 
-<img src="/src/images/easytask-module-architecture.png" alt="Easytask Components Structure"/>
+<img src="/src/assets/easytask-module-architecture.png" alt="Easytask Components Structure"/>
 
 The application follows Angular best practices with a modular component structure for maintainability and scalability.
 
